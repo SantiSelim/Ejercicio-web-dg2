@@ -15,15 +15,15 @@
   --default-font: "Poppins",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Playfair display",  sans-serif;
   --heading-font2: "Poppins",  sans-serif;
-  --nav-font: "Roboto",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2c4964; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #5846f9; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --heading-color: #232323; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #cc1729; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -35,7 +35,7 @@
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #5846f9; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #cc1729; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -802,17 +802,25 @@ section,
 
 .hero h1 {
   margin: 0;
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 700;
-  line-height: 56px;
+  line-height: 76px;
     color: #232323;
 }
 
 .hero hrojo {
   margin: 0;
-  font-size: 72px;
+  font-size: 92px;
   font-weight: 900;
   line-height: 56px;
+}
+
+.hero h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+    color: #232323;
 }
 
 .hero p {
@@ -905,10 +913,20 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about {
+    background-color: #F7F0E7
+}
+
 .about .content h3 {
   font-size: 2rem;
   font-weight: 700;
 }
+
+.about hrojoab {
+  font: Playfair Display;
+  font-weight: 700;
+}
+
 
 .about .content ul {
   list-style: none;
@@ -974,7 +992,7 @@ section,
 }
 
 .beneficios img{
-  filter: invert(14%) sepia(96%) saturate(40044%) hue-rotate(346deg) brightness(89%) contrast(93%);
+  |filter: invert(14%) sepia(96%) saturate(40044%) hue-rotate(346deg) brightness(89%) contrast(93%);
 }
 
 .beneficios:before {
@@ -1070,11 +1088,24 @@ text-align: center;
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
+
+.stats h2{
+    color: #232323;
+}
+
+
+.stats p{
+    color: #232323;
+}
+
 .stats {
   position: relative;
   padding: 80px 0;
-  background: url("../img/stats-bg.png") center center no-repeat;
+  |background: url("../img/stats-bg.png") center center no-repeat;
+    background-color: #a8d9da
   background-size: cover;
+    border-bottom-left-radius: 100px;
+     border-bottom-right-radius: 100px;
 }
 
 .stats img{
@@ -1083,7 +1114,7 @@ text-align: center;
 
 .stats:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 80%);
+  background: #a8d9da;
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1102,22 +1133,27 @@ text-align: center;
 .stats .stats-item span {
   font-size: 48px;
   display: block;
-  color: var(--default-color);
+  color: #232323;
   font-weight: 700;
 }
 
 .stats .stats-item p {
   padding: 0;
   margin: 0;
-  font-family: var(--heading-font);
-  font-size: 16px;
+  font-family: poppins;
+  font-size: 19px;
   font-weight: 700;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color:#232323;
 }
 
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+
+.services {
+    background-color: #F7F0E7
+}
+
 .services .service-item {
   position: relative;
   padding-top: 20px;
@@ -1573,8 +1609,28 @@ text-align: center;
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
+
+.team .section-title h2 {
+  text-align: center;
+  position: relative;
+    color: #F7F0E7
+}
+
+.team .section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+    color: #F7F0E7;
+}
+
+.team {
+    background: #222323;
+    border-bottom-left-radius: 100px;
+     border-bottom-right-radius: 100px;
+}
+
 .team .team-member {
-  background-color: var(--surface-color);
+  background-color: #ffff;
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
@@ -1594,11 +1650,7 @@ text-align: center;
   right: -1px;
   bottom: -1px;
   height: 100%;
-  background-color: var(--surface-color);
-  -webkit-mask: url("../img/team-shape.svg") no-repeat center bottom;
-  mask: url("../img/team-shape.svg") no-repeat center bottom;
-  -webkit-mask-size: contain;
-  mask-size: contain;
+  background-color;
   z-index: 1;
 }
 
@@ -1640,6 +1692,13 @@ text-align: center;
   font-size: 20px;
 }
 
+.team .team-member .member-info h1 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 30px;
+    color: #232323
+}
+
 .team .team-member .member-info span {
   display: block;
   font-size: 14px;
@@ -1649,6 +1708,7 @@ text-align: center;
 
 .team .team-member .member-info p {
   font-style: italic;
+    font: poppins;
   font-size: 14px;
   padding-top: 15px;
   line-height: 26px;
