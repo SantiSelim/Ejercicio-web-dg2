@@ -825,7 +825,7 @@ section,
 
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
-  margin: 5px 0 30px 0;
+  margin: 5px 0 0px 0;
   font-size: 20px;
   font-weight: 400;
     color: #232323;
@@ -914,7 +914,10 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about {
-    background-color: #F7F0E7
+    |background-color: #F7F0E7;
+    background-image: url("../img/fondo1sec.png") ;
+    background-size: cover;
+    background-size: contain;
 }
 
 .about .content h3 {
@@ -1085,6 +1088,145 @@ text-align: center;
 }
 
 
+
+/*--------------------------------------------------------------
+# Color Section
+--------------------------------------------------------------*/
+
+.scolor .section-title h2 {
+  text-align: center;
+  position: relative;
+    color: #F7F0E7
+}
+
+.scolor .section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+    color: #F7F0E7;
+}
+
+.scolor {
+    position: relative;
+    background: #a8d9da;
+    z-index: 1; /* Para que esté por encima del pseudoelemento */
+}
+
+/* Fondo adicional detrás de la sección .team */
+.scolor:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #232323; /* El color que aparecerá en las esquinas redondeadas */
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    z-index: 0; /* Asegura que quede debajo del contenido de .team */
+}
+
+.scolor .team-member {
+  background-color: #ffff;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  border-radius: 30px;
+  transition: 0.3s;
+z-index: 2;
+}
+
+.scolor .team-member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.scolor .team-member .member-img:after {
+  position: absolute;
+  content: "";
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  height: 100%;
+  background-color;
+  z-index: 1;
+}
+
+.scolor .team-member .social {
+  position: absolute;
+  right: -100%;
+  top: 30px;
+  opacity: 0;
+  border-radius: 4px;
+  transition: 0.5s;
+  background: color-mix(in srgb, var(--background-color), transparent 60%);
+  z-index: 2;
+}
+
+.scolor .team-member .social a {
+  transition: color 0.3s;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin: 15px 12px;
+  display: block;
+  line-height: 0;
+  text-align: center;
+}
+
+.scolor .team-member .social a:hover {
+  color: var(--default-color);
+}
+
+.scolor .team-member .social i {
+  font-size: 18px;
+}
+
+.scolor .team-member .member-info {
+  padding: 10px 15px 20px 15px;
+}
+
+.scolor .team-member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.scolor .team-member .member-info h1 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 7px;
+  font-size: 30px;
+    color: #232323
+}
+
+.scolor .team-member .member-info span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+.scolor .team-member .member-info p {
+  font-style: normal;
+    font: poppins;
+  font-size: 20px;
+  padding-top: 10px;
+    margin-bottom: 1px;
+  line-height: 26px;
+  color: #232323;
+}
+
+.scolor .team-member:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.scolor .team-member:hover .social {
+  right: 8px;
+  opacity: 1;
+}
+
+
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
@@ -1101,24 +1243,25 @@ text-align: center;
 .stats {
   position: relative;
   padding: 80px 0;
-  |background: url("../img/stats-bg.png") center center no-repeat;
-    background-color: #a8d9da
+  background-color: #ffffff;
   background-size: cover;
-    border-bottom-left-radius: 100px;
-     border-bottom-right-radius: 100px;
+  z-index: 1; /* Se asegura de que quede por encima del fondo adicional */
 }
 
-.stats img{
-  |filter: invert(77%) sepia(64%) saturate(7226%) hue-rotate(162deg) brightness(96%) contrast(101%);
-}
-
+/* Fondo adicional que estará detrás de la sección .stats */
 .stats:before {
   content: "";
-  background: #a8d9da;
   position: absolute;
-  inset: 0;
-  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #a8d9da; /* Color que aparecerá en las esquinas redondeadas */
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  z-index: 0; /* Asegura que quede debajo del contenido de .stats */
 }
+
 
 .stats .container {
   position: relative;
@@ -1235,6 +1378,10 @@ text-align: center;
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
+.testimonials {
+    background-color: #f7f0e7
+}
+
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
   overflow: hidden;
@@ -1251,7 +1398,7 @@ text-align: center;
   margin: -40px 0 0 40px;
   position: relative;
   z-index: 2;
-  border: 6px solid var(--background-color);
+  border: 6px solid #f7f0e7;
 }
 
 .testimonials .testimonial-item h3 {
@@ -1321,6 +1468,10 @@ text-align: center;
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+.portfolio {
+    background-color: #f7f0e7
+}
+
 .portfolio .portfolio-filters {
   padding: 0 0 20px 0;
   margin: 0 auto;
@@ -1628,6 +1779,7 @@ text-align: center;
     border-bottom-left-radius: 100px;
      border-bottom-right-radius: 100px;
 }
+
 
 .team .team-member {
   background-color: #ffff;
