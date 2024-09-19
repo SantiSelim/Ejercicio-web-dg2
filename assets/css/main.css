@@ -910,14 +910,27 @@ section,
   }
 }
 
+
+
+/*--------------------------------------------------------------
+# Separador Section
+--------------------------------------------------------------*/
+.separador {
+    background-color: #f7f0e7;
+    padding: 20px
+}
+
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
 .about {
     |background-color: #F7F0E7;
-    background-image: url("../img/fondo1sec.png") ;
+    background-image: url("../img/fondo2sec1.png") ;
     background-size: cover;
     background-size: contain;
+    padding: 80px 0px;
+    |margin-top: 20px
 }
 
 .about .content h3 {
@@ -994,6 +1007,19 @@ section,
   background-size: cover;
 }
 
+.beneficios .section-title h2 {
+  text-align: center;
+  position: relative;
+    color: #f7f0e7
+}
+
+.beneficios .section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+    color: #f7f0e7;
+}
+
 .beneficios img{
   |filter: invert(14%) sepia(96%) saturate(40044%) hue-rotate(346deg) brightness(89%) contrast(93%);
 }
@@ -1024,11 +1050,20 @@ section,
 }
 
 .beneficios .beneficios-item p {
+  padding: 0px 0px 10px 0px;
+  margin: 0;
+  font-family: poppins;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f7f0e7;
+}
+
+.beneficios .beneficios-item p2 {
   padding: 0;
   margin: 0;
   font-family: poppins;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: #f7f0e7;
 }
 
@@ -1096,19 +1131,19 @@ text-align: center;
 .scolor .section-title h2 {
   text-align: center;
   position: relative;
-    color: #F7F0E7
+    color: #232323
 }
 
 .scolor .section-title {
   text-align: center;
   padding-bottom: 60px;
   position: relative;
-    color: #F7F0E7;
+    color: #232323;
 }
 
 .scolor {
     position: relative;
-    background: #a8d9da;
+    background: #f7f0e7;
     z-index: 1; /* Para que esté por encima del pseudoelemento */
 }
 
@@ -1120,7 +1155,7 @@ text-align: center;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #232323; /* El color que aparecerá en las esquinas redondeadas */
+    background-color: #f7f0e7; /* El color que aparecerá en las esquinas redondeadas */
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     z-index: 0; /* Asegura que quede debajo del contenido de .team */
@@ -1351,6 +1386,10 @@ z-index: 2;
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
+.features{
+    background-color: #f7f0e7
+}
+
 .features .features-image {
   position: relative;
   min-height: 400px;
