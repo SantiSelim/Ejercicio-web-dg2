@@ -30,8 +30,8 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.8);  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #f7f0e7;  /* The default color of the main navmenu links */
+  --nav-hover-color: #f7f0e7; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -47,18 +47,18 @@
 
 .dark-background {
   --background-color: #060606;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --default-color: #f7f0e7;
+  --heading-color: #f7f0e7;
   --surface-color: #202020;
-  --contrast-color: #ffffff;
+  --contrast-color: #f7f0e7;
     --contrast-color2: #232323;
 }
 
 .accent-background {
-  --background-color: #5846f9;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --accent-color: #ffffff;
+  --background-color: #232323;
+  --default-color: #f7f0e7;
+  --heading-color: #f7f0e7;
+  --accent-color: #f7f0e7;
   --surface-color: #7c25ba;
   --contrast-color: #ffffff;
     --contrast-color2: #232323;
@@ -159,8 +159,8 @@ span.enrojo { color:#cc1729;font-weight:900;font-family:Playfair Display;font-si
 --------------------------------------------------------------*/
 .header {
   --background-color: rgba(0, 0, 0, 0);
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --default-color: #f7f0e7;
+  --heading-color: #f7f0e7;
   color: var(--default-color);
   background-color: var(--background-color);
     background-color: #232323;
@@ -183,7 +183,8 @@ span.enrojo { color:#cc1729;font-weight:900;font-family:Playfair Display;font-si
   font-size: 30px;
   margin: 0;
   font-weight: 700;
-  color: var(--heading-color);
+  |color: var(--heading-color);
+  color: #f7f0e7;
 }
 
 .header .btn-getstarted,
@@ -262,6 +263,7 @@ span.enrojo { color:#cc1729;font-weight:900;font-family:Playfair Display;font-si
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
+      |color: #f7f0e7;
     font-size: 15px;
     padding: 0 2px;
     font-family: var(--nav-font);
@@ -530,6 +532,7 @@ span.enrojo { color:#cc1729;font-weight:900;font-family:Playfair Display;font-si
 .footer .footer-about p {
   font-size: 14px;
   font-family: var(--heading-font2);
+    color: #f7f0e7;
 }
 
 .footer .social-links a {
@@ -542,13 +545,16 @@ span.enrojo { color:#cc1729;font-weight:900;font-family:Playfair Display;font-si
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 16px;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
+    |color: #cc1729;
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  |color: var(--accent-color);
+  |border-color: var(--accent-color);
+  color: #f7f0e7;
+  border-color: #f7f0e7;
 }
 
 .footer h4 {
@@ -556,6 +562,7 @@ span.enrojo { color:#cc1729;font-weight:900;font-family:Playfair Display;font-si
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+    color: #f7f0e7;
 }
 
 .footer .footer-links {
@@ -591,11 +598,13 @@ span.enrojo { color:#cc1729;font-weight:900;font-family:Playfair Display;font-si
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  |color: var(--accent-color);
+  color: #f7f0e7;
 }
 
 .footer .footer-contact p {
   margin-bottom: 5px;
+    color: #f7f0e7;
 }
 
 .footer .copyright {
@@ -869,16 +878,26 @@ section,
 }
 
 @media (max-width: 640px) {
-  .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+    .hero {
+    background-image: url("../img/heromobile@4x.png")
+    }
+    .hero h1 {
+    font-size: 60px;
+    line-height: 60px;
   }
-
+    
   .hero p {
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
+    
+.hero hrojo {
+  margin: 0;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 60px;
+}
 
   .hero .btn-get-started,
   .hero .btn-watch-video {
@@ -896,6 +915,11 @@ section,
   }
 }
 
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+  .hero .row {
+    flex-direction: column-reverse;
+  }
+}
 
 
 /*--------------------------------------------------------------
@@ -997,72 +1021,51 @@ section,
 --------------------------------------------------------------*/
 .beneficios {
   position: relative;
-  padding: 80px 0px 80px 0px;
-  |background: url("../img/stats-bg.png") center center no-repeat;
-    background-color: #232323;
+  padding: 80px 0px;
+  background-color: #232323;
   background-size: cover;
 }
 
-.beneficios .section-title h2 {
+.beneficios .section-title h2, .beneficios .section-title p {
   text-align: center;
-  position: relative;
-    color: #f7f0e7
-}
-
-.beneficios .section-title {
-  text-align: center;
-  padding-bottom: 60px;
-  position: relative;
-    color: #f7f0e7;
-}
-
-.beneficios img{
-  |filter: invert(14%) sepia(96%) saturate(40044%) hue-rotate(346deg) brightness(89%) contrast(93%);
-}
-
-.beneficios:before {
-  content: "";
-  background-color: #232323;
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-
-.beneficios .container {
-  position: relative;
-  z-index: 3;
+  color: #f7f0e7;
 }
 
 .beneficios .beneficios-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 30px;
-  width: 100%;
+  background-color: transparent;
 }
 
-.beneficios .beneficios-item span {
-  font-size: 48px;
-  display: block;
-  color: var(--default-color);
-  font-weight: 700;
+.beneficios .beneficios-item img {
+  margin-bottom: 0px;
 }
 
 .beneficios .beneficios-item p {
-  padding: 0px 0px 10px 0px;
-  margin: 0;
-  font-family: poppins;
+  font-family: Poppins, sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: #f7f0e7;
+  margin: 0 0 10px 0;
 }
 
-.beneficios .beneficios-item p2 {
-  padding: 0;
-  margin: 0;
-  font-family: poppins;
+.beneficios .beneficios-item .descripcion {
+  font-family: Poppins, sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #f7f0e7;
+  margin: 0;
 }
 
+@media (max-width: 768px) {
+  .beneficios .beneficios-item {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
 
 
 /*--------------------------------------------------------------
@@ -1139,7 +1142,7 @@ text-align: center;
 
 .scolor {
     position: relative;
-    background: #232323;
+    background: #f7f0e7;
     z-index: 1; /* Para que esté por encima del pseudoelemento */
 }
 
@@ -1326,7 +1329,7 @@ z-index: 2;
 
 .services {
     position: relative;
-    background-color: #f7f0e7;
+    background-color: #232323;
     z-index: 1;
 }
 
