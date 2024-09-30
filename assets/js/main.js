@@ -216,3 +216,61 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+// Función para verificar si es vista móvil
+function isMobile() {
+    return window.innerWidth <= 768; // Ajusta este valor según tu diseño si es necesario
+}
+
+// Función para actualizar los href de los enlaces
+function updateLinkHref() {
+    // Modificar los enlaces del header
+
+    // Características en el header
+    var caracteristicasLinkHeader = document.getElementById('caracteristicas-link');
+    if (caracteristicasLinkHeader) {
+        if (isMobile()) {
+            caracteristicasLinkHeader.setAttribute('href', '#benmob');
+        } else {
+            caracteristicasLinkHeader.setAttribute('href', '#beneficios');
+        }
+    }
+
+    // Colores en el header
+    var coloresLinkHeader = document.getElementById('colores-link');
+    if (coloresLinkHeader) {
+        if (isMobile()) {
+            coloresLinkHeader.setAttribute('href', '#selsec');
+        } else {
+            coloresLinkHeader.setAttribute('href', '#scolor');
+        }
+    }
+
+    // Modificar los enlaces del footer
+
+    // Características en el footer
+    var caracteristicasLinkFooter = document.getElementById('caracteristicas-link-footer');
+    if (caracteristicasLinkFooter) {
+        if (isMobile()) {
+            caracteristicasLinkFooter.setAttribute('href', '#benmob');
+        } else {
+            caracteristicasLinkFooter.setAttribute('href', '#beneficios');
+        }
+    }
+
+    // Colores en el footer
+    var coloresLinkFooter = document.getElementById('colores-link-footer');
+    if (coloresLinkFooter) {
+        if (isMobile()) {
+            coloresLinkFooter.setAttribute('href', '#selsec');
+        } else {
+            coloresLinkFooter.setAttribute('href', '#scolor');
+        }
+    }
+}
+
+// Ejecutar la función cuando se cargue la página
+window.onload = updateLinkHref;
+
+// También ejecutarla cuando se redimensione la ventana
+window.onresize = updateLinkHref;
